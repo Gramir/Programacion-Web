@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(134, 120, 120);
+  }
+  
+  table {
+    margin: auto;
+    background-color: rgb(19, 63, 77);
+    text-align: center;
+    border-radius: 4px;
+    padding-right: 10px;
+  }
+  
+  input {
+    outline: 0;
+    position: relative;
+    left: 5px;
+    top: 5px;
+    border: 0;
+    color: #495069;
+    background-color: #fff;
+    border-radius: 4px;
+    width: 60px;
+    height: 50px;
+    float: left;
+    margin: 5px;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+   
+  #pantalla {
+    width: 265px;
+    max-width: 270px;
+    font-size: 26px;
+    text-align: right;
+    background-color: #bcbd95;
+    float: left;
+  }
+  
+  .operador {
+    background-color: #cee9ea;
+    position: relative;
+  }
+  
+  #limpiar {
+    float: left;
+    position: relative;
+    display: block;
+    background-color: #ff9fa8;
+  }
+  
+  #Borrar{
+    background-color: #cee9ea;
+    position: relative;
+    font-size: 15px;
+  }
+
+  ul{
+    width: 265px;
+    max-width: 200px;
+    font-size: 26px;
+    text-align: right;
+    background-color: #bcbd95;
+    float: top;
+    position: top;
+  }
+
+  #Historial{
+    margin: auto;
+    
+  }

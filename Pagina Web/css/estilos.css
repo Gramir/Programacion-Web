@@ -1,0 +1,31 @@
+body {background:rgb(213, 237, 247);}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    top: 100px;
+    left: 30%;
+}
+
+ p {
+    color:Black;
+    font-size: 20px;
+    font-style: italic;
+    width: 700px;
+    background: whitesmoke;
+    border:10px solid;
+}
+
+p, iframe{
+    position: relative;
+    top: -100px;
+    left: 30%;
+}
+
+img{
+    position: relative;
+    top: 100px;
+    left: 17%;
+}
+
+

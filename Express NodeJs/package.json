@@ -1,0 +1,14 @@
+{
+  "name": "express-nodejs",
+  "version": "1.0.0",
+  "description": "Tarea#5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gilberto Ramirez Suazo 2018-6834",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

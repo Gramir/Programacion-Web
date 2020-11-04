@@ -1,0 +1,34 @@
+body {
+    background-color: #cee9ea;
+  }
+  
+input{
+    border: 0;
+    position: relative;
+    color: #495069;
+    background-color: #fff;  
+    border-radius: 4px;
+    margin: 5px;  
+}  
+
+#Boton{
+    margin: 5px;
+    border-radius: 4px;
+    font-size: large;
+    position: relative;
+}
+
+h1{
+    font-family: fantasy;
+    font-style: italic;
+}
+
+a{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+h2{
+    font-family: unset;
+    font-size: 40px;
+}

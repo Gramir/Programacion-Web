@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">    
+</head>
+<body>
+
+    <form name="Calculadora">
+        <table>
+           <tr>
+              <td colspan="4">
+                 <input type="text" name="pantalla" id="pantalla" value="" placeholder="0" disabled>               
+              </td>
+           </tr>
+           <tr>
+                 <td><input type="button" name="uno" value="1" onclick="Calculadora.pantalla.value += '1'"></td>
+                 <td><input type="button" name="dos" value="2" onclick="Calculadora.pantalla.value += '2'"></td>
+                 <td><input type="button" name="tres" value="3" onclick="Calculadora.pantalla.value += '3'"></td>
+                 <td><input type="button" class="operador" name="mas" value="+" onclick="Calculadora.pantalla.value += '+'"></td>
+          </tr>
+          <tr>
+                 <td><input type="button" name="cuatro" value="4" onclick="Calculadora.pantalla.value += '4'"></td>
+                 <td><input type="button" name="cinco" value="5" onclick="Calculadora.pantalla.value += '5'"></td>
+                 <td><input type="button" name="seis" value="6" onclick="Calculadora.pantalla.value += '6'"></td>
+                 <td><input type="button" class="operador" name="menos" value="-" onclick="Calculadora.pantalla.value += '-'"></td>
+          </tr>
+          <tr>
+                 <td><input type="button" name="siete" value="7" onclick="Calculadora.pantalla.value += '7'"></td>
+                 <td><input type="button" name="ocho" value="8" onclick="Calculadora.pantalla.value += '8'"></td>
+                 <td><input type="button" name="nueve" value="9" onclick="Calculadora.pantalla.value += '9'"></td>
+                 <td><input type="button" class="operador" name="por" value="x" onclick="Calculadora.pantalla.value += '*'"></td>
+          </tr>
+          <tr>
+                 <td><input type="button" name="limpiar" value="c" onclick="Calculadora.pantalla.value = ''"></td>
+                 <td><input type="button" name="cero" value="0" onclick="Calculadora.pantalla.value += '0'"></td>
+                 <td><input type="button" name="igual" value="=" onclick="Mostrar()"></td>
+                 <td><input type="button" class="operador" name="entre" value="/" onclick="Calculadora.pantalla.value += '/'"></td>          
+           </tr>
+        </table>
+     </form>
+   <div id="Historial">
+    <h2>Historial</h2>
+    <ul></ul>  
+    <button id="Borrar">Borrar Historial</button>
+   </div>
+   </body>
+   <script src="js.js"></script>
+</html>

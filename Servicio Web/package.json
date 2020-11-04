@@ -1,0 +1,16 @@
+{
+  "name": "servicio-web",
+  "version": "1.0.0",
+  "description": "Tarea Programacion web #5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gilberto Ramirez Suazo 2018-6834",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "ejs-lint": "^1.0.1",
+    "express": "^4.17.1"
+  }
+}

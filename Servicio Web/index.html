@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Servicio Web</title>
+    <style>
+      body {
+    background-color: #cee9ea;
+  }
+  
+input{
+    border: 0;
+    position: relative;
+    color: #495069;
+    background-color: #fff;  
+    border-radius: 4px;
+    margin: 5px;  
+}  
+
+#Boton{
+    margin: 5px;
+    border-radius: 4px;
+    font-size: large;
+    position: relative;
+}
+
+h1{
+    font-family: fantasy;
+    font-style: italic;
+}
+
+a{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+h2{
+    font-family: unset;
+    font-size: 40px;
+}
+    </style>
+   
+</head>
+<body onload="obtenerDatos()"></body>
+<br>
+  <h2>Gilberto Ramirez Suazo 2018-6834</h2>
+  <h1>Agregar Contacto </h1> </br> 
+  <div id="Agregar">
+    <a>Nombre:</a></br>  
+    <input type="text" name="" id="Nombre"></br>
+    <a>Apellido:</a></br>  
+    <input type="text" name="" id="Apellido"></br>
+    <a>Telefono:</a></br>  
+    <input type="text" name="" id="Telefono"></br>
+    <input type="button" id="Boton" value="Enviar" onclick="Mandar()" >
+    
+  </div></br>
+
+<h1>Lista de todos los contactos almacenados</h1>
+<div id ="contenedor">
+ 
+</div>
+</body>
+<script>
+  function obtenerDatos(){
+    fetch("http://www.raydelto.org/agenda.php")
+    .then(
+        function(valor)
+        {
+            return valor.json();
+        }
+    ).then(function(valor)
+    {
+     
+        var Lista = document.getElementById("contenedor");
+        var HTML = '';
+        for (var i = 0; i < valor.length; i++) {
+        
+         HTML += '<a class="encabezado">Nombre: </a>   <a>'+valor[i].nombre+'</a> </br>' + '<a class="encabezado">Apellido:</a> <a>'+valor[i].apellido+'</a><br/>' + '<a class="encabezado">Telefono:</a> <a>'+valor[i].telefono+'</a><br/>' + '</br>' ;    
+        }
+        Lista.innerHTML = HTML
+    }
+    );       
+}
+
+var Name = document.getElementById("Nombre");
+var LastName = document.getElementById("Apellido");
+var Phone = document.getElementById("Telefono");
+
+function Mandar(){
+
+let contacto = {nombre: Name.value, apellido: LastName.value, telefono: Phone.value};
+
+fetch("http://www.raydelto.org/agenda.php", 
+{
+method:'POST', 
+body:JSON.stringify(contacto)}
+).then( res => res.json()).then(
+(res) => 
+{
+console.log(res);
+alert('Guardado con Exito!');
+Name.value = '';
+LastName.value='';
+Phone.value='';
+obtenerDatos(); 
+}
+
+);
+}
+</script>
+</html>
